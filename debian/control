@@ -1,0 +1,13 @@
+Source: libdist-zilla-app-command-dhmakeperl-perl
+Section: perl
+Priority: optional
+Maintainer: Shantanu Bhadoria <shantanu@cpan.org>
+Build-Depends: debhelper (>= 8)
+Build-Depends-Indep: perl
+Standards-Version: 3.9.2
+Homepage: http://search.cpan.org/dist/Dist-Zilla-App-Command-dhmakeperl/
+
+Package: libdist-zilla-app-command-dhmakeperl-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends}
+Description: use dh-make-perl to generate .deb archives from your CPAN package
