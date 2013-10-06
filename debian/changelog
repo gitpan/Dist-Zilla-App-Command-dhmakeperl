@@ -1,6 +1,14 @@
-dist-zilla-app-command-dhmakeperl (0.001) stable; urgency=low
+dist-zilla-app-command-dhmakeperl (0.002) stable; urgency=low
+  * Added POD Documentation and versioning support in generated deb files 
+
+ -- Shantanu Bhadoria <shantanu@cpan.org>  Sun, 06 Oct 2013 11:17:12 -0000
+
+dist-zilla-app-command-dhmakeperl (release-0.001) stable; urgency=low
+  * v0.001
+  - First Commit [Shantanu]
+  - First Commit [Shantanu] 
   * First Commit 
   * First Commit 
 
- -- Shantanu Bhadoria <shantanu@cpan.org>  Sat, 05 Oct 2013 13:10:46 -0000
+ -- Shantanu Bhadoria <shantanu@cpan.org>  Sat, 05 Oct 2013 13:11:33 -0000
 

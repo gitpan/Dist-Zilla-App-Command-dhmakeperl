@@ -13,7 +13,7 @@ package Dist::Zilla::App::Command::dhmakeperl;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '0.001'; # VERSION
+our $VERSION = '0.002'; # VERSION
 
 # Dependencies
 use Dist::Zilla::App -command;
@@ -41,7 +41,8 @@ sub execute {
     system('rm -rf debuild');
     mkdir('debuild');
     $self->zilla->build_in('debuild/source');
-    system('dh-make-perl make --vcs none --build debuild/source');
+    system( 'dh-make-perl make --vcs none --build debuild/source --version '
+          . $self->zilla->version );
 }
 1;
 
@@ -55,7 +56,7 @@ Dist::Zilla::App::Command::dhmakeperl - use dh-make-perl to generate .deb archiv
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 METHODS
 
@@ -73,8 +74,44 @@ version 0.001
 
 =item *
 
-You must have dh-make-perl installed on your system to use this command. use
-sudo apt-get install dh-make-perl to install it on debian and ubuntu
+http:E<sol>E<sol>bugs.debian.orgE<sol>cgi-binE<sol>bugreport.cgi?bug=683533 If you have
+accidentally upgraded Makemaker you may apply this patch to fix the
+perllocal.pod error.
+
+=back
+
+     --- ./Debian/Debhelper/Buildsystem/makefile.pm  2012-05-19 17:26:26.000000000 +0200
+     +++ ./Debian/Debhelper/Buildsystem/makefile.pm.new      2012-08-01 15:53:41.000000000 +0200
+     @@ -100,9 +100,9 @@
+ 
+      sub install {
+             my $this=shift;
+             my $destdir=shift;
+     -       $this->make_first_existing_target(['install'],
+     +       $this->make_first_existing_target(['pure_install', 'install'],
+                     "DESTDIR=$destdir",
+                     "AM_UPDATE_INFO_DIR=no", @_);
+      }
+
+=over
+
+=item *
+
+The .deb archive is created using code in your current repository. It does not
+use cpan2deb to pull CPAN code to create the .deb archive.
+
+=item *
+
+You must have dh-make-perl installed on your system to use this command. 
+
+=item *
+
+use sudo apt-get install dh-make-perl to install it on debian and ubuntu.
+
+=item *
+
+The .deb file will be created in the debuild folder, This should be added to
+your .gitignore file.
 
 =back
 

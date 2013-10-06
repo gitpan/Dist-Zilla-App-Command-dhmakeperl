@@ -12,6 +12,10 @@ __DATA__
 debian
 dh
 ubuntu
+Makemaker
+debuild
+gitignore
+perllocal
 Shantanu
 Bhadoria
 shantanu

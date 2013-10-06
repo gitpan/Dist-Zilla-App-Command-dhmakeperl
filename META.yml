@@ -30,7 +30,7 @@ no_index:
 provides:
   Dist::Zilla::App::Command::dhmakeperl:
     file: lib/Dist/Zilla/App/Command/dhmakeperl.pm
-    version: 0.001
+    version: 0.002
 requires:
   Dist::Zilla::App: 0
   autodie: 0
@@ -41,6 +41,6 @@ resources:
   bugtracker: https://github.com/shantanubhadoria/dist-zilla-app-command-dhmakeperl/issues
   homepage: https://metacpan.org/release/Dist-Zilla-App-Command-dhmakeperl
   repository: git://github.com/shantanubhadoria/dist-zilla-app-command-dhmakeperl.git
-version: 0.001
+version: 0.002
 x_contributors:
   - 'Shantanu <shantanu@cpan.org>'
