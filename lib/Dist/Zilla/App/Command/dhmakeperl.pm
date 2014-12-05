@@ -8,12 +8,12 @@ package Dist::Zilla::App::Command::dhmakeperl;
 #
 # This file is part of Dist-Zilla-App-Command-dhmakeperl
 #
-# This software is copyright (c) 2013 by Shantanu Bhadoria.
+# This software is copyright (c) 2014 by Shantanu Bhadoria.
 #
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '0.002'; # VERSION
+our $VERSION = '0.003'; # VERSION
 
 # Dependencies
 use Dist::Zilla::App -command;
@@ -56,7 +56,27 @@ Dist::Zilla::App::Command::dhmakeperl - use dh-make-perl to generate .deb archiv
 
 =head1 VERSION
 
-version 0.002
+version 0.003
+
+=head1 SYNOPSIS
+
+Once the package is installed and you have setup the prereqs, you can run the following command inside your package folder:
+
+     dzil dhmakeperl
+
+Once this is done your package will be tested and deb file will be generated in the debuild folder for you.
+
+=head1 DESCRIPTION
+
+This is a extension for the LE<lt>Dist::ZillaE<gt> App that adds a command dhmakeperl to your dzil package for compiling your perl modules into .deb packages. 
+
+Before you install this package make sure that dh-make-perl is installed in your debianE<sol>ubuntu system. There are some additional app requirements that you might want to install for dh-make-perl to avoid annoying warnings from dh-make-perl.
+
+     sudo apt-get install dh-make-perl
+     sudo apt-get install apt-file
+     sudo apt-file update
+
+To make sure that your changelog and debian control file is included use plugins LE<lt>Dist::Zilla::Plugin::Control::DebianE<gt> and LE<lt>Dist::Zilla::Plugin::ChangelogFromGit::DebianE<gt> in your dist.ini
 
 =head1 METHODS
 
@@ -138,13 +158,25 @@ L<https://github.com/shantanubhadoria/dist-zilla-app-command-dhmakeperl>
 
 Shantanu Bhadoria <shantanu at cpan dott org>
 
-=head1 CONTRIBUTOR
+=head1 CONTRIBUTORS
+
+=for stopwords Shantanu Bhadoria
+
+=over 4
+
+=item *
 
 Shantanu <shantanu@cpan.org>
 
+=item *
+
+Shantanu Bhadoria <shantanu@cpan.org>
+
+=back
+
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Shantanu Bhadoria.
+This software is copyright (c) 2014 by Shantanu Bhadoria.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
