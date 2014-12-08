@@ -5,7 +5,7 @@ NAME
 
 VERSION
 
-    version 0.004
+    version 0.005
 
 SYNOPSIS
 
@@ -19,7 +19,7 @@ SYNOPSIS
 
 DESCRIPTION
 
-    This is a extension for the L<Dist::Zilla> App that adds a command
+    This is a extension for the Dist::Zilla App that adds a command
     dhmakeperl to your dzil package for compiling your perl modules into
     .deb packages.
 
@@ -33,8 +33,8 @@ DESCRIPTION
          sudo apt-file update
 
     To make sure that your changelog and debian control file is included
-    use plugins L<Dist::Zilla::Plugin::Control::Debian> and
-    L<Dist::Zilla::Plugin::ChangelogFromGit::Debian> in your dist.ini
+    use plugins Dist::Zilla::Plugin::Control::Debian and
+    Dist::Zilla::Plugin::ChangelogFromGit::Debian in your dist.ini
 
 METHODS
 

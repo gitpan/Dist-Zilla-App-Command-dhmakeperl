@@ -13,7 +13,7 @@ package Dist::Zilla::App::Command::dhmakeperl;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '0.004'; # VERSION
+our $VERSION = '0.005'; # VERSION
 
 # Dependencies
 use Dist::Zilla::App -command;
@@ -56,7 +56,7 @@ Dist::Zilla::App::Command::dhmakeperl - use dh-make-perl to generate .deb archiv
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 SYNOPSIS
 
@@ -68,7 +68,7 @@ Once this is done your package will be tested and deb file will be generated in 
 
 =head1 DESCRIPTION
 
-This is a extension for the LE<lt>Dist::ZillaE<gt> App that adds a command dhmakeperl to your dzil package for compiling your perl modules into .deb packages. 
+This is a extension for the L<Dist::Zilla> App that adds a command dhmakeperl to your dzil package for compiling your perl modules into .deb packages. 
 
 Before you install this package make sure that dh-make-perl is installed in your debianE<sol>ubuntu system. There are some additional app requirements that you might want to install for dh-make-perl to avoid annoying warnings from dh-make-perl.
 
@@ -76,7 +76,7 @@ Before you install this package make sure that dh-make-perl is installed in your
      sudo apt-get install apt-file
      sudo apt-file update
 
-To make sure that your changelog and debian control file is included use plugins LE<lt>Dist::Zilla::Plugin::Control::DebianE<gt> and LE<lt>Dist::Zilla::Plugin::ChangelogFromGit::DebianE<gt> in your dist.ini
+To make sure that your changelog and debian control file is included use plugins L<Dist::Zilla::Plugin::Control::Debian> and L<Dist::Zilla::Plugin::ChangelogFromGit::Debian> in your dist.ini
 
 =head1 METHODS
 
@@ -94,7 +94,7 @@ To make sure that your changelog and debian control file is included use plugins
 
 =item *
 
-http:E<sol>E<sol>bugs.debian.orgE<sol>cgi-binE<sol>bugreport.cgi?bug=683533 If you have
+L<http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=683533> If you have
 accidentally upgraded Makemaker you may apply this patch to fix the
 perllocal.pod error.
 
