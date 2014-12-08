@@ -1,7 +1,11 @@
-dist-zilla-app-command-dhmakeperl (0.003) stable; urgency=low
+dist-zilla-app-command-dhmakeperl (release-0.003) stable; urgency=low
+  * v0.003
+  - rebuilt pod and changes files (Shantanu Bhadoria)
+  - Fixed a spelling mistake in the pod (Shantanu Bhadoria)
+  - Added some more documentation (Shantanu Bhadoria) 
   * rebuilt pod and changes files 
   * Fixed a spelling mistake in the pod 
   * Added some more documentation 
 
- -- Shantanu Bhadoria <shantanu@cpan.org>  Fri,  5 Dec 2014 15:05:19 +0000
+ -- Shantanu Bhadoria <shantanu@cpan.org>  Fri,  5 Dec 2014 15:06:05 +0000
 

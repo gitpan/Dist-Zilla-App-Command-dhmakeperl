@@ -13,7 +13,7 @@ package Dist::Zilla::App::Command::dhmakeperl;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '0.003'; # VERSION
+our $VERSION = '0.004'; # VERSION
 
 # Dependencies
 use Dist::Zilla::App -command;
@@ -56,7 +56,7 @@ Dist::Zilla::App::Command::dhmakeperl - use dh-make-perl to generate .deb archiv
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 

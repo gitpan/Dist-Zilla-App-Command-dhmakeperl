@@ -69,7 +69,7 @@
    "provides" : {
       "Dist::Zilla::App::Command::dhmakeperl" : {
          "file" : "lib/Dist/Zilla/App/Command/dhmakeperl.pm",
-         "version" : "0.003"
+         "version" : "0.004"
       }
    },
    "release_status" : "stable",
@@ -84,7 +84,7 @@
          "web" : "https://github.com/shantanubhadoria/dist-zilla-app-command-dhmakeperl"
       }
    },
-   "version" : "0.003",
+   "version" : "0.004",
    "x_contributors" : [
       "Shantanu <shantanu@cpan.org>",
       "Shantanu Bhadoria <shantanu@cpan.org>"
